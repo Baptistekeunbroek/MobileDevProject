@@ -17,7 +17,7 @@ As the iOS development team at TechToTech agency, we created a mobile applicatio
 
 ### 1. Download or clone the project from GitHub
 
-- Use the command `git clone` :  git clone https://github.com/username/project-name.git
+- Use the command `git clone` :  git clone https://github.com/Baptistekeunbroek/MobileDevProject.git
 - Download zip files 
 
 ### 2. Open Xcode application
