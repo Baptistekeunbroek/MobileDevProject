@@ -54,12 +54,10 @@ struct NetworkManager {
     }
 
     func fetchSpeakerDetails(ids: [String], completion: @escaping ([Speaker]) -> Void) {
-            // Assuming you have a base URL for your API
-            let baseUrl = "https://api.yourdatabase.com/speakers/"
-
+            let baseUrl = "https://api.airtable.com/v0/speakers/" // not working
             var speakers: [Speaker] = []
 
-            // Creating a dispatch group to manage multiple network requests
+           
             let dispatchGroup = DispatchGroup()
 
             for id in ids {
@@ -83,7 +81,7 @@ struct NetworkManager {
                 }.resume()
             }
 
-            // Once all requests are completed, return the array of speakers
+           
             dispatchGroup.notify(queue: .main) {
                 completion(speakers)
             }
