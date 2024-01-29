@@ -53,8 +53,41 @@ struct NetworkManager {
         }.resume()
     }
 
+    func fetchSpeakerDetails(ids: [String], completion: @escaping ([Speaker]) -> Void) {
+            // Assuming you have a base URL for your API
+            let baseUrl = "https://api.yourdatabase.com/speakers/"
 
+            var speakers: [Speaker] = []
 
+            // Creating a dispatch group to manage multiple network requests
+            let dispatchGroup = DispatchGroup()
 
-}
+            for id in ids {
+                guard let url = URL(string: baseUrl + id) else { continue }
+
+                dispatchGroup.enter()
+
+                URLSession.shared.dataTask(with: url) { data, response, error in
+                    defer { dispatchGroup.leave() }
+
+                    if let data = data, error == nil {
+                        do {
+                            let speaker = try JSONDecoder().decode(Speaker.self, from: data)
+                            speakers.append(speaker)
+                        } catch {
+                            print("Error decoding speaker: \(error)")
+                        }
+                    } else if let error = error {
+                        print("Network error: \(error)")
+                    }
+                }.resume()
+            }
+
+            // Once all requests are completed, return the array of speakers
+            dispatchGroup.notify(queue: .main) {
+                completion(speakers)
+            }
+        }
+    }
+
 

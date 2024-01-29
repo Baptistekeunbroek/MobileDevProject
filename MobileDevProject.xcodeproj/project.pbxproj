@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9B2672432B67D7E70016AF0A /* Navigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2672422B67D7E70016AF0A /* Navigation.swift */; };
+		9B2672562B680DA20016AF0A /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B2672552B680DA20016AF0A /* Model.swift */; };
 		9B60D4012B5EA3AB001A5201 /* MobileDevProjectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B60D4002B5EA3AB001A5201 /* MobileDevProjectApp.swift */; };
 		9B60D4032B5EA3AB001A5201 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B60D4022B5EA3AB001A5201 /* ContentView.swift */; };
 		9B60D4052B5EA3AC001A5201 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B60D4042B5EA3AC001A5201 /* Assets.xcassets */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		9B2672422B67D7E70016AF0A /* Navigation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Navigation.swift; sourceTree = "<group>"; };
+		9B2672552B680DA20016AF0A /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		9B60D3FD2B5EA3AB001A5201 /* MobileDevProject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileDevProject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B60D4002B5EA3AB001A5201 /* MobileDevProjectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobileDevProjectApp.swift; sourceTree = "<group>"; };
 		9B60D4022B5EA3AB001A5201 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +78,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9B2672472B6805600016AF0A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				9B60D4022B5EA3AB001A5201 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		9B2672512B6809AC0016AF0A /* Network Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9B60D42D2B5EADC3001A5201 /* NetworkManager.swift */,
+			);
+			path = "Network Manager";
+			sourceTree = "<group>";
+		};
+		9B2672522B680D8B0016AF0A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9B2672552B680DA20016AF0A /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		9B60D3F42B5EA3AB001A5201 = {
 			isa = PBXGroup;
 			children = (
@@ -99,10 +125,11 @@
 		9B60D3FF2B5EA3AB001A5201 /* MobileDevProject */ = {
 			isa = PBXGroup;
 			children = (
+				9B2672522B680D8B0016AF0A /* Models */,
+				9B2672512B6809AC0016AF0A /* Network Manager */,
+				9B2672472B6805600016AF0A /* Views */,
 				9B60D4002B5EA3AB001A5201 /* MobileDevProjectApp.swift */,
 				9B2672422B67D7E70016AF0A /* Navigation.swift */,
-				9B60D4022B5EA3AB001A5201 /* ContentView.swift */,
-				9B60D42D2B5EADC3001A5201 /* NetworkManager.swift */,
 				9B60D4042B5EA3AC001A5201 /* Assets.xcassets */,
 				9B60D4062B5EA3AC001A5201 /* MobileDevProject.entitlements */,
 				9B60D4072B5EA3AC001A5201 /* Preview Content */,
@@ -265,6 +292,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B2672562B680DA20016AF0A /* Model.swift in Sources */,
 				9B60D42E2B5EADC3001A5201 /* NetworkManager.swift in Sources */,
 				9B60D4032B5EA3AB001A5201 /* ContentView.swift in Sources */,
 				9B60D4012B5EA3AB001A5201 /* MobileDevProjectApp.swift in Sources */,

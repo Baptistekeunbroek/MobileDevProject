@@ -10,21 +10,34 @@ import Foundation
 import SwiftUI
 
 struct Navigation: View {
+    
+    
     var body: some View {
         TabView {
+            
             
             HomePageView()
                 .tabItem {
                     Label("Home", systemImage: "house")
                 }
+            
+                .toolbarBackground(.blue.opacity(0.6), for: .tabBar)
+                .toolbarBackground(.visible, for: .tabBar)
+            
 
             AllActivitiesView()
                 .tabItem {
-                    Label("Activities", systemImage: "list.bullet")
+                    Label("All Activities", systemImage: "list.bullet")
                 }
+            
+                .toolbarBackground(.blue.opacity(0.6), for: .tabBar)
+                .toolbarBackground(.visible, for: .tabBar)
+            
         }
+        .accentColor(.black)
         
     }
+    
 }
 
 struct Navigation_Previews: PreviewProvider {
